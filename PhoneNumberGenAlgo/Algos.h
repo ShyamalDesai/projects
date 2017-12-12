@@ -1,12 +1,26 @@
 #pragma once
+#include <iostream>
 #include <vector>
+#define PHONE_NUMBER_SIZE 7
+
 namespace Algos
 {
+	void
+	print(const std::vector<int>& base)
+	{
+        	//++countofnos;
+        	for (int i = 0; i < PHONE_NUMBER_SIZE; ++i)
+                	std::cout << base[i];
+
+        	std::cout << std::endl;
+	}
+
+
 	//static algo definitions
 	//the first is the number generator algorithm that uses a supplied object to generate new moves
 	//It also receives the depth of numbers to be generated as argument
 	//since this algo has state, it be better implemented using a functor
-
+	template <typename GENERATOR>
 	struct PhoneNumberGeneratorAlgo
 	{
 		PhoneNumberGeneratorAlgo(const int size, const int maxMoveCount=3) 
@@ -14,9 +28,8 @@ namespace Algos
 		, _maxMoveCount (maxMoveCount)
 		{}
 
-		template <typename GENERATOR>
 		bool
-		operator () (const GENERATOR& gen,
+		operator() (const GENERATOR& gen,
 						std::vector <int>& base,
 						int lastDigit,
 						int count)
@@ -42,7 +55,7 @@ namespace Algos
 				if (moves[movecount] != -1)
 				{
 					base[count] = moves[movecount];
-					this->operator()(gen, base, moves[movecount], count + 1);
+					this->operator() (gen, base, moves[movecount], count + 1);
 				}
 			}
 			return bRet;

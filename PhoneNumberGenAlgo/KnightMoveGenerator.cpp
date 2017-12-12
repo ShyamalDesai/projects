@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "KnightMoveGenerator.h"
 #include <sstream>
 
@@ -25,7 +24,7 @@ KnightMoveGenerator::~KnightMoveGenerator()
 }
 
 const std::vector <int>& 
-KnightMoveGenerator::getMovesFromPosition(const int val) const
+KnightMoveGenerator::getMovesFromPosition(const int val ) const
 {
 	//check for boundaries
 	if (val > 9 || val < 0)
