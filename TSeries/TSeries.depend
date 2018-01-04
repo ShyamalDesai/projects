@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1513875240 source:/home/sdesai/dev/projects/TSeries/main.cpp
+	<iostream>
+	"TimeSeries.h"
+
+1513875425 /home/sdesai/dev/projects/TSeries/TimeSeries.h
+	<vector>
+	<stdexcept>
+
