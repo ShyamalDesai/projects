@@ -1,0 +1,7 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
+activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:PhoneNumberGenAlgo
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:PhoneNumberGenAlgo/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:PhoneNumberGenAlgo/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
