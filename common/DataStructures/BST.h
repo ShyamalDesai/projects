@@ -3,12 +3,13 @@
 template <typename KEY, typename VALUE>
 struct BSTNode
 {
-	BSTNode(const KEY key, const VALUE value)
+	BSTNode(const KEY key, const VALUE value, int count)
 		: _key (key)
 		, _value(value)
 		, _parent (nullptr)
 		, _leftChild(nullptr)
 		, _rightChild(nullptr)
+		, _count (count)
 	{
 		_comp = COMPARATOR();
 	}
@@ -17,7 +18,7 @@ struct BSTNode
 	BSTNode <T>* _parent;
 	BSTNode <T>* _leftChild;
 	BSTNode <T>* _rightChild;
-	
+	int _count;
 
 private:
 	BSTNode(const BSTNode<T>&) = delete;
@@ -110,7 +111,7 @@ BST<KEY, VALUE, COMPARATOR>::put(BSTNode<KEY, VALUE, COMPARATOR>* node,
 											VALUE& value)
 {
 	if (node == nullptr) {
-		return new BSTNode<KEY, VALUE, COMPARATOR>(key, value);
+		return new BSTNode<KEY, VALUE, COMPARATOR>(key, value, 1);
 	}
 	if (key == node->_key)
 	{
@@ -124,6 +125,9 @@ BST<KEY, VALUE, COMPARATOR>::put(BSTNode<KEY, VALUE, COMPARATOR>* node,
 			node->_leftChild = put(node->_leftChild, key, value);
 		else if (key > node->_key)
 			node->_rightChild = put(node->_rightChild, key, value);
+
+		node._count = 1 + size(node._leftChild) + size(node._rightChild);
 	}
+	
 	return node;
 }
