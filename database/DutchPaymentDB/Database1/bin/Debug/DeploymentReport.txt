@@ -1,0 +1,47 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Account] (Table)
+       [dbo].[AccountToUser] (Table)
+       [dbo].[ACHPaymentUnit] (Table)
+       [dbo].[Country] (Table)
+       [dbo].[MasterCardPaymentUnit] (Table)
+       [dbo].[PaymentTokenAttribute] (Table)
+       [dbo].[PaymentTokenDefinition] (Table)
+       [dbo].[PaymentTokenToAttribute] (Table)
+       [dbo].[PaymentTokenToUnit] (Table)
+       [dbo].[PaymentTokenUnit] (Table)
+       [dbo].[PaymentType] (Table)
+       [dbo].[State] (Table)
+       [dbo].[TransactionDetails] (Table)
+       [dbo].[User] (Table)
+       [dbo].[UserToPaymentToken] (Table)
+       [dbo].[UserToPaymentTokenUnit] (Table)
+       [dbo].[VisaPaymentUnit] (Table)
+       [dbo].[Zipcode] (Table)
+       [dbo].[FK_AccountToUser_User] (Foreign Key)
+       [dbo].[FK_AccountToUser_Account] (Foreign Key)
+       [dbo].[FK_PaymentTokenToAttributes_PaymentTokenId] (Foreign Key)
+       [dbo].[FK_PaymentTokenToAttributes_PaymentTokenAttribute] (Foreign Key)
+       [dbo].[FK_PaymentTokenToUnits_PaymentTokenDefinition] (Foreign Key)
+       [dbo].[FK_PaymentTokenToUnits_PaymentTokenUnit] (Foreign Key)
+       [dbo].[FK_PaymentTokenUnit_ToPaymentType] (Foreign Key)
+       [dbo].[FK_State_ToCountry] (Foreign Key)
+       [dbo].[FK_TransactionDetails_PaymentTokenDefinition] (Foreign Key)
+       [dbo].[FK_UserToPaymentToken_User] (Foreign Key)
+       [dbo].[FK_UserToPaymentToken_PaymentTokenDefinition] (Foreign Key)
+       [dbo].[FK_UserToPaymentTokenUnit_User] (Foreign Key)
+       [dbo].[FK_UserToPaymentTokenUnit_PaymentTokenUnit] (Foreign Key)
+       [dbo].[FK_Zipcode_State] (Foreign Key)
+       [dbo].[FK_Zipcode_Country] (Foreign Key)
+
+** Supporting actions
