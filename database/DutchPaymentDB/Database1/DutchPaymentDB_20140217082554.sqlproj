@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DutchPaymentDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{33af3c68-cb54-4de8-9e64-3c00d7f399da}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Database1</RootNamespace>
+    <AssemblyName>DutchPaymentDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>True</SqlServerVerification>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <GenerateCreateScript>False</GenerateCreateScript>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Schema" />
+    <Folder Include="Schema\dbo" />
+    <Folder Include="Schema\dbo\Tables" />
+    <Folder Include="Schema\dbo\StoredProcs" />
+    <Folder Include="Data" />
+    <Folder Include="PostDeployment" />
+    <Folder Include="Predeployment" />
+    <Folder Include="PostDeployment\Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schema\dbo\Tables\Account.table.sql" />
+    <Build Include="Schema\dbo\Tables\PaymentTokenDefinition.table.sql" />
+    <Build Include="Schema\dbo\Tables\User.table.sql" />
+    <Build Include="Schema\dbo\Tables\PaymentTokenUnit.table.sql" />
+    <Build Include="Schema\dbo\Tables\ACHPaymentUnit.table.sql" />
+    <Build Include="Schema\dbo\Tables\VisaPaymentUnit.table.sql" />
+    <Build Include="Schema\dbo\Tables\PaymentType.table.sql" />
+    <Build Include="Schema\dbo\Tables\PaymentTokenToUnits.table.sql" />
+    <Build Include="Schema\dbo\Tables\TransactionDetail.table.sql" />
+    <Build Include="Schema\dbo\Tables\UserToPaymentTokenUnit.table.sql" />
+    <Build Include="Schema\dbo\Tables\UserToPaymentToken.table.sql" />
+    <Build Include="Schema\dbo\Tables\MasterCardPaymentUnit.table.sql" />
+    <Build Include="Schema\dbo\Tables\AccountToUser.table.sql" />
+    <Build Include="Schema\dbo\Tables\Country.table.sql" />
+    <Build Include="Schema\dbo\Tables\State.table.sql" />
+    <Build Include="Schema\dbo\Tables\Zipcode.table.sql" />
+    <None Include="PostDeployment\Data\PaymentTokenToAttributes_data.sql" />
+    <Build Include="Schema\dbo\Tables\PaymentTokenAttribute.table.sql" />
+    <Build Include="Schema\dbo\Tables\PaymentTokenToAttribute.sql" />
+    <None Include="PostDeployment\Data\PaymentType_data.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DutchPaymentDB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PostDeployment\Data\Account_data.sql" />
+    <None Include="PostDeployment\Data\PaymentTokenDefinition_data.sql" />
+    <None Include="PostDeployment\Data\User_data.sql" />
+    <None Include="PostDeployment\Data\country_data.sql" />
+    <None Include="PostDeployment\Data\state_data.sql" />
+    <None Include="PostDeployment\Data\ZipCode_data.sql" />
+    <None Include="PostDeployment\Data\PaymentTokenAttribute_data.sql" />
+    <None Include="PostDeployment\Data\achpaymentunit_data.sql" />
+    <None Include="PostDeployment\Data\VisaPaymentUnit_data.sql" />
+    <None Include="PostDeployment\Data\PaymentTokenUnit_data.sql" />
+    <None Include="PostDeployment\Data\paymenttokentounit_data.sql" />
+    <None Include="PostDeployment\Data\UsertoPaymentToken_data.sql" />
+    <None Include="PostDeployment\Data\UserToPaymentTokenUnit_data.sql" />
+  </ItemGroup>
+</Project>

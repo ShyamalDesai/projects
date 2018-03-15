@@ -1,0 +1,5 @@
+d:\users\shyamal\documents\visual studio 2012\Projects\DutchPaymentDB\Database1\bin\Debug\DutchPaymentDB.dacpac
+d:\users\shyamal\documents\visual studio 2012\Projects\DutchPaymentDB\Database1\bin\Debug\DutchPaymentDB.dll
+d:\users\shyamal\documents\visual studio 2012\Projects\DutchPaymentDB\Database1\bin\Debug\DutchPaymentDB.pdb
+d:\users\shyamal\documents\visual studio 2012\Projects\DutchPaymentDB\Database1\obj\Debug\DutchPaymentDB.dll
+d:\users\shyamal\documents\visual studio 2012\Projects\DutchPaymentDB\Database1\obj\Debug\DutchPaymentDB.pdb
