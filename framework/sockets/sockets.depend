@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1515536113 source:/home/sdesai/dev/projects/framework/sockets/Acceptor.cpp
+	"Acceptor.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<iostream>
+	<unistd.h>
+
+1515620191 /home/sdesai/dev/projects/framework/sockets/Acceptor.h
+	"SocketCommon.h"
+	"../../common/interfaces/IAMDataPublisher.h"
+	"../../common/interfaces/IDataListener.h"
+	<set>
+
+1515125187 /home/sdesai/dev/projects/framework/sockets/SocketCommon.h
+	<netinet/in.h>
+	<arpa/inet.h>
+	<sys/socket.h>
+	<ctype.h>
+	<netdb.h>
+
+1515620371 source:/home/sdesai/dev/projects/framework/sockets/Connector.cpp
+	"Connector.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+
+1515620361 /home/sdesai/dev/projects/framework/sockets/Connector.h
+	"SocketCommon.h"
+	<string>
+
+1515535602 /home/sdesai/dev/projects/common/interfaces/IAMDataPublisher.h
+	"IDataListener.h"
+
+1515620067 /home/sdesai/dev/projects/common/interfaces/IDataListener.h
+	<memory>
+
+1515620741 source:/home/sdesai/dev/projects/framework/sockets/src/LinuxSocketHandler.cpp
+	"LinuxSocketHandler.h"
+	"../../../common/BaseUtil/LinuxErrorHelper.h"
+	<exception>
+	<unistd.h>
+	<errno.h>
+	<stdexcept>
+
+1515619663 /home/sdesai/dev/projects/framework/sockets/include/LinuxSocketHandler.h
+	<sys/epoll.h>
+
+1515102197 /home/sdesai/dev/projects/common/BaseUtil/LinuxErrorHelper.h
+	<string>
+
